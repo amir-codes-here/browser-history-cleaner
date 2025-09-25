@@ -31,7 +31,7 @@ The script **only deletes history records** — bookmarks, cookies, saved passwo
 ## Usage
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<your-username>/browser-history-cleaner.git
+   git clone https://github.com/amir-codes-here/browser-history-cleaner.git
    cd browser-history-cleaner
    ```
 2. Run `script.py`
