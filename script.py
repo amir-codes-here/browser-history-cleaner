@@ -12,7 +12,7 @@ def remove_firefox_history(search_str: str):
 
     profile_dirs = [d for d in os.listdir(profiles_path) if os.path.isdir(os.path.join(profiles_path, d))]
     if not profile_dirs:
-        print("No Firefox profiles found.")
+        print("Found 0 Firefox profile(s).")
         return
 
     print(f"Found {len(profile_dirs)} Firefox profile(s).")
@@ -20,7 +20,7 @@ def remove_firefox_history(search_str: str):
     for profile in profile_dirs:
         db_path = os.path.join(profiles_path, profile, "places.sqlite")
         if not os.path.exists(db_path):
-            print(f"Skipping {profile}: no places.sqlite found.")
+            print(f"Skipping {profile}: no History database found.")
             continue
 
         backup_path = db_path + ".backup"
@@ -69,6 +69,10 @@ def remove_chrome_history(search_str: str):
         return
 
     profile_dirs = [d for d in os.listdir(profiles_path) if os.path.isdir(os.path.join(profiles_path, d))]
+    if not profile_dirs:
+        print("Found 0 Chrome profile(s).")
+        return
+
     print(f"Found {len(profile_dirs)} Chrome profile(s).")
 
     for profile in profile_dirs:
