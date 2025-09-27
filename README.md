@@ -1,12 +1,12 @@
 # Browser History Cleaner
 
-A Python script to safely remove browsing history entries from **Chrome** and **Firefox** based on a search string in their URLs (**for windows 10 and 11**).  
+A Python script to safely remove browsing history entries from **Chrome**, **Firefox** and **Microsoft Edge** based on a search string in their URLs (**for windows 10 and 11**).  
 The script **only deletes history records** — bookmarks, cookies, saved passwords, and other data remain untouched.
 
 ---
 
 ## Features
-- Works with **Google Chrome** and **Mozilla Firefox**
+- Works with **Google Chrome**, **Mozilla Firefox** and **Microsoft Edge**
 - Searches for a keyword/substring in history URLs
 - Deletes only matching history records
 - Creates a **backup** of the history database before making changes
@@ -47,11 +47,14 @@ The script **only deletes history records** — bookmarks, cookies, saved passwo
 
 ## Restoring Backups
 1. Navigate to your browser's profile folder
-    - for chrome
-        `C:\Users\<YourName>\AppData\Local\Google\Chrome\User Data\Default`
-    - for Firefox
-        `C:\Users\<YourName>\AppData\Roaming\Mozilla\Firefox\Profiles\<ProfileName>`
+    - For Chrome: 
+      `C:\Users\<YourName>\AppData\Local\Google\Chrome\User Data\Default`
+    - For Firefox: 
+      `C:\Users\<YourName>\AppData\Roaming\Mozilla\Firefox\Profiles\<ProfileName>`
+    - For Edge: 
+      `C:\Users\<YourName>\AppData\Local\Microsoft\Edge\User Data\Default`
 2. Delete the modified file
-    - for Chrome -> `History`
-    - for Firefox -> `places.sqlite`
+    - For Chrome → `History`
+    - For Firefox → `places.sqlite`
+    - For Edge → `History`
 3. Rename the corresponding `.backup` file back to the original name
